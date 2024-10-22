@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35410.144 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlowbiteDotNetMvcApp", "FlowbiteDotNetMvcApp\FlowbiteDotNetMvcApp.csproj", "{E193DB8E-EB1F-4547-BBD9-9F6A9BB6F55A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E193DB8E-EB1F-4547-BBD9-9F6A9BB6F55A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E193DB8E-EB1F-4547-BBD9-9F6A9BB6F55A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E193DB8E-EB1F-4547-BBD9-9F6A9BB6F55A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E193DB8E-EB1F-4547-BBD9-9F6A9BB6F55A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
