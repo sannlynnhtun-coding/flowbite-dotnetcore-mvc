@@ -173,7 +173,7 @@ Create a new `.cshtml` file (for example, `Chart.cshtml`) and add the following 
 
 In the same view or your layout file, add the following JavaScript code for rendering the chart:
 
-```csharp
+```js
 @section Scripts {
 <script>
     const options = {
