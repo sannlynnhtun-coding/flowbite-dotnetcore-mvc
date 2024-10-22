@@ -1,0 +1,20 @@
+{
+  "name": "flowbitedotnetmvcapp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:css": "npx tailwindcss -i ./wwwroot/css/tailwind.css -o ./wwwroot/css/output.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "tailwindcss": "^3.4.14"
+  },
+  "dependencies": {
+    "apexcharts": "^3.54.1",
+    "flowbite": "^2.5.2"
+  }
+}
