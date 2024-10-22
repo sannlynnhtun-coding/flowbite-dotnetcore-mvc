@@ -243,9 +243,7 @@ In the same view or your layout file, add the following JavaScript code for rend
       },
     }
 
-    if (
-
-    document.getElementById("area-chart") && typeof ApexCharts !== 'undefined') {
+    if (document.getElementById("area-chart") && typeof ApexCharts !== 'undefined') {
       const chart = new ApexCharts(document.getElementById("area-chart"), options);
       chart.render();
     }
