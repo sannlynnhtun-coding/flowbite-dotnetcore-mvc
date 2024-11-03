@@ -48,16 +48,6 @@ Create a `styles.css` file in the `wwwroot/css/` folder of your ASP.NET Core app
 @import 'flowbite';
 ```
 
-Then, reference this stylesheet in your layout file (e.g., `_Layout.cshtml`):
-
-```html
-<link href="~/css/styles.css" rel="stylesheet" />
-```
-
-You’re right; Step 4 could be made clearer. In ASP.NET Core projects, you should set up a watch task to process and output the Tailwind CSS styles in the correct path within the `wwwroot` folder. Here's the corrected version of Step 4:
-
----
-
 ### 4. **Run Tailwind CSS**
 
 Since Tailwind CSS needs to process `styles.css` and output the final CSS file, you need to use a build command. Follow these steps:
