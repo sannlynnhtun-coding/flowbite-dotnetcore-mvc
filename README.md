@@ -2,7 +2,7 @@
 
 ### 1. **Install Flowbite and Tailwind CSS**
 
-Flowbite is built on top of Tailwind CSS, so you’ll need to install both Tailwind and Flowbite into your project. Follow these steps:
+Flowbite is built on top of Tailwind CSS, so youâ€™ll need to install both Tailwind and Flowbite into your project. Follow these steps:
 
 - First, install the necessary dependencies by initializing your project with Node.js. If you haven't already, install `npm` from [Node.js](https://nodejs.org/).
 
@@ -15,7 +15,7 @@ npm install tailwindcss flowbite
 
 ### 2. **Configure Tailwind CSS**
 
-Create a `tailwind.config.js` file in your project’s root directory and configure it to include Flowbite:
+Create a `tailwind.config.js` file in your projectâ€™s root directory and configure it to include Flowbite:
 
 ```javascript
 /** @type {import('tailwindcss').Config} */
@@ -54,22 +54,36 @@ Then, reference this stylesheet in your layout file (e.g., `_Layout.cshtml`):
 <link href="~/css/styles.css" rel="stylesheet" />
 ```
 
+Youâ€™re right; Step 4 could be made clearer. In ASP.NET Core projects, you should set up a watch task to process and output the Tailwind CSS styles in the correct path within the `wwwroot` folder. Here's the corrected version of Step 4:
+
+---
+
 ### 4. **Run Tailwind CSS**
 
-You need to run Tailwind CSS to process the `styles.css` file:
+Since Tailwind CSS needs to process `styles.css` and output the final CSS file, you need to use a build command. Follow these steps:
 
-```bash
-npx tailwindcss -i ./wwwroot/css/styles.css -o ./wwwroot/css/output.css --watch
-```
+1. Update the input path to `styles.css` and specify an output file (`output.css`) in the `wwwroot/css/` folder:
 
-Alternatively, you can set up a script in your `package.json` to simplify this process:
+    ```bash
+    npx tailwindcss -i ./wwwroot/css/styles.css -o ./wwwroot/css/output.css --watch
+    ```
 
-```json
-"scripts": {
-  "build:css": "tailwindcss -i ./wwwroot/css/styles.css -o ./wwwroot/css/output.css",
-  "watch:css": "tailwindcss -i ./wwwroot/css/styles.css -o ./wwwroot/css/output.css --watch"
-}
-```
+2. **Update `_Layout.cshtml`** to use the compiled `output.css`:
+
+    ```html
+    <link href="~/css/output.css" rel="stylesheet" />
+    ```
+
+3. **Automate the Tailwind CSS Build** (optional): Set up scripts in your `package.json` for easier management:
+
+    ```json
+    "scripts": {
+      "build:css": "tailwindcss -i ./wwwroot/css/styles.css -o ./wwwroot/css/output.css",
+      "watch:css": "tailwindcss -i ./wwwroot/css/styles.css -o ./wwwroot/css/output.css --watch"
+    }
+    ```
+
+You can now run `npm run watch:css` during development, and `npm run build:css` for production to generate your Tailwind CSS styles in `output.css`.
 
 ### 5. **Set Up Flowbite Chart**
 
